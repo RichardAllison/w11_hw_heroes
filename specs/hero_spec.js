@@ -10,15 +10,15 @@ describe("Hero Tests", function (){
   })
 
   it ("should have a name", function (){
-    assert.strictEqual(hero.name, "Achilles")
+    assert.strictEqual(hero.name, "Achilles");
   })
 
   it ("should have health", function (){
-    assert.strictEqual(hero.health, 100)
+    assert.strictEqual(hero.health, 100);
   })
 
-  xit ("should have a favourite food", function (){
-
+  it ("should have a favourite food", function (){
+    assert.strictEqual(hero.favourite_food, "Ambrosia");
   })
 
   xit ("should be able to talk saying their names", function (){
