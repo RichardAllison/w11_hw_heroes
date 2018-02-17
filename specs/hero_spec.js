@@ -21,8 +21,8 @@ describe("Hero Tests", function (){
     assert.strictEqual(hero.favourite_food, "Ambrosia");
   })
 
-  xit ("should be able to talk saying their names", function (){
-
+  it ("should be able to talk saying their names", function (){
+    assert.strictEqual(hero.talk(), "I am Achilles");
   })
 
   xit ("should have a collection of tasks to complete", function (){
