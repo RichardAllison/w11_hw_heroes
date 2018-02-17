@@ -1,4 +1,5 @@
-const Hero = function () {
+const Hero = function (name) {
+  this.name = name;
 
 }
 

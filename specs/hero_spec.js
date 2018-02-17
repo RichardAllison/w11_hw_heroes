@@ -6,11 +6,11 @@ describe("Hero Tests", function (){
   let hero;
 
   beforeEach("Setup", function (){
-    hero = new Hero();
+    hero = new Hero("Achilles", "Ambrosia");
   })
 
-  xit ("should have a name", function (){
-
+  it ("should have a name", function (){
+    assert.strictEqual(hero.name, "Achilles")
   })
 
   xit ("should have health", function (){

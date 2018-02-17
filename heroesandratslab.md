@@ -1,6 +1,6 @@
 # Heroes & Rats Lab
 
-This weekend, dwindling boardgame company ZsoltBazlintonGamez Inc have got in touch to ask you to revitalise their fortunes by dragging them into the modern age and helping them make a JavaScript adventure game! Your task is to test drive the beginnings of the game!
+This weekend, dwindling board game company ZsoltBazlintonGamez Inc have got in touch to ask you to revitalise their fortunes by dragging them into the modern age and helping them make a JavaScript adventure game! Your task is to test drive the beginnings of the game!
 
 ## Tasks:
 
