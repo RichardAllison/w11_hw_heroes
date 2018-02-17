@@ -1,5 +1,5 @@
-const Task = function () {
-
+const Task = function (description) {
+  this.description = description;
 }
 
 module.exports = Task;

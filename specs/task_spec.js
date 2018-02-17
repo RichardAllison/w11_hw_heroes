@@ -3,14 +3,16 @@ const Task = require("../task.js");
 
 describe("Task Tests", function (){
 
-  let task;
+  let task1;
+  let task2;
 
   beforeEach("Setup", function (){
-    task = new Task();
+    task1 = new Task("Fight Trojans");
+    task2 = new Task("Run marathon (against a tortoise) in Olympic games");
   })
 
-  xit ("should have a description", function (){
-
+  it ("should have a description", function (){
+    assert.strictEqual(task1.description, "Fight Trojans");
   })
 
   xit ("should have a difficulty level", function (){
