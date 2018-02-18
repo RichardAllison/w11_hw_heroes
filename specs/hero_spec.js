@@ -82,9 +82,11 @@ describe("Hero Tests", function () {
     assert.deepStrictEqual(hero.viewCompleteTasks(), [task1]);
   });
 
-  xit ("should be able to view tasks that are marked as incomplete", function () {
-    hero.viewIncompleteTasks();
-    assert.deepStrictEqual();
+  it ("should be able to view tasks that are marked as incomplete", function () {
+    hero.addTask(task1);
+    hero.addTask(task2);
+    task1.complete();
+    assert.deepStrictEqual(hero.viewIncompleteTasks(), [task2]);
   });
 
 

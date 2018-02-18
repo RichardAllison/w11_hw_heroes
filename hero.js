@@ -41,7 +41,13 @@ Hero.prototype.sortTasksByReward = function () {
 
 Hero.prototype.viewCompleteTasks = function () {
   return this.tasks.filter(function (task) {
-    return task.completed === true;
+    return task.completed;
+  })
+};
+
+Hero.prototype.viewIncompleteTasks = function () {
+  return this.tasks.filter(function (task) {
+    return !task.completed;
   })
 };
 
