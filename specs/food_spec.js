@@ -6,15 +6,15 @@ describe("Food Tests", function (){
   let food;
 
   beforeEach("Setup", function (){
-    food = new Food("Ambrosia");
+    food = new Food("Ambrosia", 100);
   })
 
   it ("should have a name", function (){
     assert.strictEqual(food.name, "Ambrosia");
   })
 
-  xit ("should have a replenishment value", function (){
-
+  it ("should have a replenishment value", function (){
+    assert.strictEqual(food.replenishmentValue, 100);
   })
 
 })
