@@ -46,8 +46,9 @@ describe("Hero Tests", function () {
     assert.strictEqual(hero.health, 120);
   });
 
-  xit ("should increase health by 1.5 * value if eating favourite food", function () {
-
+  it ("should increase health by 1.5 * value if eating favourite food", function () {
+    hero.eatFood(food1);
+    assert.strictEqual(hero.health, 250);
   });
 
   xit ("should be able to sort their tasks by difficulty, urgency or reward", function () {
