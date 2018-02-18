@@ -27,6 +27,10 @@ describe("Task Tests", function (){
     assert.strictEqual(task1.reward, "Proving your bravery");
   })
 
+  it ("should start marked as uncompleted", function (){
+    assert.strictEqual(task1.completed, false);
+  })
+
   xit ("should be able to be marked as completed", function (){
 
   })
