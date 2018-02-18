@@ -31,8 +31,9 @@ describe("Task Tests", function (){
     assert.strictEqual(task1.completed, false);
   })
 
-  xit ("should be able to be marked as completed", function (){
-
+  it ("should be able to be marked as completed", function (){
+    task1.complete();
+    assert.strictEqual(task1.completed, true);
   })
 
 })
