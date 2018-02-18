@@ -75,9 +75,11 @@ describe("Hero Tests", function () {
     assert.deepStrictEqual(hero.tasks, [task2, task2, task1]);
   });
 
-  xit ("should be able to view tasks that are marked as completed", function () {
-    hero.viewCompleteTasks();
-    assert.deepStrictEqual();
+  it ("should be able to view tasks that are marked as completed", function () {
+    hero.addTask(task1);
+    hero.addTask(task2);
+    task1.complete();
+    assert.deepStrictEqual(hero.viewCompleteTasks(), [task1]);
   });
 
   xit ("should be able to view tasks that are marked as incomplete", function () {
