@@ -7,8 +7,8 @@ describe("Task Tests", function (){
   let task2;
 
   beforeEach("Setup", function (){
-    task1 = new Task("Fight Trojans", 10, 10);
-    task2 = new Task("Run marathon (against a tortoise) in Olympic games", 1, 0);
+    task1 = new Task("Fight Trojans", 10, 10, "Proving your bravery");
+    task2 = new Task("Run marathon (against a tortoise) in Olympic games", 1, 0, "Proving Zeno wrong");
   })
 
   it ("should have a description", function (){
@@ -23,8 +23,8 @@ describe("Task Tests", function (){
     assert.strictEqual(task1.urgency, 10);
   })
 
-  xit ("should have a reward", function (){
-
+  it ("should have a reward", function (){
+    assert.strictEqual(task1.reward, "Proving your bravery");
   })
 
   xit ("should be able to be marked as completed", function (){
