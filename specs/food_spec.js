@@ -6,11 +6,11 @@ describe("Food Tests", function (){
   let food;
 
   beforeEach("Setup", function (){
-    food = new Food();
+    food = new Food("Ambrosia");
   })
 
-  xit ("should have a name", function (){
-
+  it ("should have a name", function (){
+    assert.strictEqual(food.name, "Ambrosia");
   })
 
   xit ("should have a replenishment value", function (){
