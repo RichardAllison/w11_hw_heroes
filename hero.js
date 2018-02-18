@@ -21,4 +21,22 @@ Hero.prototype.eatFood = function (food) {
   }
 };
 
+Hero.prototype.sortTasksByDifficulty = function () {
+  this.tasks.sort(function (firstOfTasks, secondOfTasks) {
+    return secondOfTasks.difficulty - firstOfTasks.difficulty;
+  });
+};
+
+Hero.prototype.sortTasksByUrgency = function () {
+  this.tasks.sort(function (firstOfTasks, secondOfTasks) {
+    return secondOfTasks.urgency - firstOfTasks.urgency;
+  });
+};
+
+Hero.prototype.sortTasksByReward = function () {
+  this.tasks.sort(function (firstOfTasks, secondOfTasks) {
+    return secondOfTasks.reward - firstOfTasks.reward;
+  });
+};
+
 module.exports = Hero;

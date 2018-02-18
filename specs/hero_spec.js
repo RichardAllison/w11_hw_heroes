@@ -13,8 +13,8 @@ describe("Hero Tests", function () {
 
   beforeEach("Setup", function () {
     hero = new Hero("Achilles", "Ambrosia");
-    task1 = new Task("Fight Trojans", 10, 10, "Proving your bravery");
-    task2 = new Task("Run marathon (against a tortoise) in Olympic games", 1, 0, "Proving Zeno wrong");
+    task1 = new Task("Fight Trojans", 10, 10, 100);
+    task2 = new Task("Run marathon (against a tortoise) in Olympic games", 1, 0, 200);
     food1 = new Food("Ambrosia", 100);
     food2 = new Food("τηγανίτης", 20);
   });
@@ -51,12 +51,38 @@ describe("Hero Tests", function () {
     assert.strictEqual(hero.health, 250);
   });
 
-  xit ("should be able to sort their tasks by difficulty, urgency or reward", function () {
-
+  it ("should be able to sort their tasks by difficulty", function () {
+    hero.addTask(task1);
+    hero.addTask(task2);
+    hero.addTask(task1);
+    hero.sortTasksByDifficulty();
+    assert.deepStrictEqual(hero.tasks, [task1, task1, task2]);
   });
 
-  xit ("should be able to view tasks that are marked as completed or incomplete", function () {
+  it ("should be able to sort their tasks by urgency", function () {
+    hero.addTask(task2);
+    hero.addTask(task1);
+    hero.addTask(task2);
+    hero.sortTasksByUrgency();
+    assert.deepStrictEqual(hero.tasks, [task1, task2, task2]);
+  });
 
+  it ("should be able to sort their tasks by reward", function () {
+    hero.addTask(task1);
+    hero.addTask(task2);
+    hero.addTask(task2);
+    hero.sortTasksByReward();
+    assert.deepStrictEqual(hero.tasks, [task2, task2, task1]);
+  });
+
+  xit ("should be able to view tasks that are marked as completed", function () {
+    hero.viewCompleteTasks();
+    assert.deepStrictEqual();
+  });
+
+  xit ("should be able to view tasks that are marked as incomplete", function () {
+    hero.viewIncompleteTasks();
+    assert.deepStrictEqual();
   });
 
 
