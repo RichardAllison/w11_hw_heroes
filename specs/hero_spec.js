@@ -55,7 +55,8 @@ describe("Hero Tests", function () {
     hero.addTask(task1);
     hero.addTask(task2);
     hero.addTask(task1);
-    hero.sortTasksByDifficulty();
+    // hero.sortTasksByDifficulty();
+    hero.sortTasks("difficulty", "descending");
     assert.deepStrictEqual(hero.tasks, [task1, task1, task2]);
   });
 
@@ -63,7 +64,8 @@ describe("Hero Tests", function () {
     hero.addTask(task2);
     hero.addTask(task1);
     hero.addTask(task2);
-    hero.sortTasksByUrgency();
+    // hero.sortTasksByUrgency();
+    hero.sortTasks("urgency", "descending");
     assert.deepStrictEqual(hero.tasks, [task1, task2, task2]);
   });
 
@@ -71,7 +73,8 @@ describe("Hero Tests", function () {
     hero.addTask(task1);
     hero.addTask(task2);
     hero.addTask(task2);
-    hero.sortTasksByReward();
+    // hero.sortTasksByReward();
+    hero.sortTasks("reward", "descending");
     assert.deepStrictEqual(hero.tasks, [task2, task2, task1]);
   });
 
